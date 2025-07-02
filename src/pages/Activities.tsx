@@ -57,7 +57,7 @@ const Activities = ({
         );
 
         const res = await fetch(
-          `http://103.154.252.16:8080/futureBull/api/findByClientTypeAndTradeDate?client=${selectedParticipant}&date=${formattedDate}`,
+          `/api/findByClientTypeAndTradeDate?client=${selectedParticipant}&date=${formattedDate}`,
         );
         const response = await res.json();
 
@@ -220,7 +220,7 @@ const Activities = ({
         }
 
         const formattedDate = dateObject.toISOString().split("T")[0];
-        const apiUrl = `http://103.154.252.16:8080/futureBull/api/findByClientTypeAndTradeDate?client=${selectedParticipant}&date=${formattedDate}`; // TODO: Replace with your actual API endpoint
+        const apiUrl = `/api/findByClientTypeAndTradeDate?client=${selectedParticipant}&date=${formattedDate}`; // TODO: Replace with your actual API endpoint
         const res = await fetch(apiUrl);
         if (!res.ok) throw new Error("Failed to fetch activities data");
         const response = await res.json();
