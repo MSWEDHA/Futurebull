@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/*"
+  to = "http://103.154.252.16:8080/futureBull/api/:splat"
+  status = 200
+  force = true
