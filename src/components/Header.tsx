@@ -71,7 +71,7 @@ const Header = ({
       setTradeDatesLoading(true);
       try {
         const res = await fetch(
-          "http://103.154.252.16:8080/futureBull/api/fetchTradeDates",
+          "/api/fetchTradeDates",
         );
         const data = await res.json();
         setTradeDates(
